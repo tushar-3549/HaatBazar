@@ -5,7 +5,7 @@ import json
 
 from sql_connection import get_sql_connection
 import products
-# import orders
+import order
 import uom
 
 app = FastAPI()
@@ -45,18 +45,18 @@ def insert_product(data: str = Form(...)):
 
 # Endpoint: Get all orders
 
-# @app.get("/getAllOrders")
-# def get_all_orders():
-#     response = orders.get_all_orders(connection)
-#     return JSONResponse(content=response)
+@app.get("/getAllOrders")
+def get_all_orders():
+    response = order.get_all_orders(connection)
+    return JSONResponse(content=response)
 
 # Endpoint: Insert new order
 
-# @app.post("/insertOrder")
-# def insert_order(data: str = Form(...)):
-#     request_payload = json.loads(data)
-#     order_id = orders.insert_order(connection, request_payload)
-#     return JSONResponse(content={"order_id": order_id})
+@app.post("/insertOrder")
+def insert_order(data: str = Form(...)):
+    request_payload = json.loads(data)
+    order_id = order.insert_order(connection, request_payload)
+    return JSONResponse(content={"order_id": order_id})
 
 # Endpoint: Delete a product
 @app.post("/deleteProduct")

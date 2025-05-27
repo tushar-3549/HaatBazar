@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> GSMS </title>
+    <title> হাট-বাজার </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -43,9 +43,15 @@
         <div class="body content rows scroll-y">
             <form action="">
                 <div class="box-info full" id="taskFormContainer">
-                    <h2>New Order
+
+                    <!-- <h2>New Order
                         <input name="customerName" id="customerName" type="text" class="form-control" placeholder="Customer Name" style="max-width:230px; float: right;margin-top: -11px">
-                    </h2>
+                    </h2> -->
+
+                    <h2>New Order</h2>
+                    <input name="customerName" id="customerName" type="text" class="form-control" placeholder="Customer Name" style="max-width:230px; float: right; margin-top: -11px">
+
+
                     <div class="row" style="margin-bottom: 5px;margin-top: -10px;">
                         <div class="col-sm-12">
                             <div class="col-sm-4">
@@ -57,9 +63,9 @@
                             <div class="col-sm-2">
                                 <label >Quantity</label>
                             </div>
-                            <div class="col-sm-3">
-                                <label >Total</label>
-                                <button class="btn btn-sm btn-primary pull-right" style="margin-top: -5px" type="button" id="addMoreButton">Add More</button>
+                            <div class="col-sm-3" style="margin-top: 5px;">
+                                <label style="margin-top: 5px;">Total</label>
+                                <button class="btn btn-sm btn-primary pull-right" style="margin-top: 5px" type="button" id="addMoreButton">Add More</button>
                             </div>
                         </div>
                     </div>
@@ -77,7 +83,7 @@
                                     <span><b>Total</b></span>
                                 </div>
                                 <div class="col-sm-3">
-                                    <b><input id="product_grand_total" name="product_grand_total" class="product-grand-total" value="0.0"></input> Rs</b>
+                                    <b><input id="product_grand_total" name="product_grand_total" class="product-grand-total" value="0.0"></input> BDT</b>
                                     <button class="btn btn-sm btn-primary pull-right" type="button" id="saveOrder">Save</button>
                                 </div>
                             </div>
@@ -99,7 +105,7 @@
                                 <input name="qty" type="number" min="1" placeholder="" class="form-control product-qty" value="1" style="max-width: 100px">
                             </div>
                             <div class="col-sm-3">
-                                <input id="item_total" name="item_total" class="product-total"></input><span> Rs</span>
+                                <input id="item_total" name="item_total" class="product-total"></input><span> BDT</span>
                                 <button class="btn btn-sm btn-danger pull-right remove-row" type="button">Remove</button>
                             </div>
                         </div>
