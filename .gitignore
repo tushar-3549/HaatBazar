@@ -1,2 +1,9 @@
+# Ignore virtual environment folder
 venv/
-__pycache__
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore pytest cache
+.pytest_cache/

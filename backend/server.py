@@ -3,10 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import json
 
-from sql_connection import get_sql_connection
-import products
-import order
-import uom
+# from sql_connection import get_sql_connection
+# import products
+# import order
+# import uom
+
+from backend.sql_connection import get_sql_connection
+from backend import products, order, uom
 
 app = FastAPI()
 
