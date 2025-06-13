@@ -1,4 +1,9 @@
-from backend.sql_connection import get_sql_connection
+# For implement
+from sql_connection import get_sql_connection
+
+# For test
+# from backend.sql_connection import get_sql_connection
+
 from datetime import datetime
 
 def get_all_products(connection):
@@ -41,8 +46,8 @@ def delete_product(connection, product_id):
     cursor.execute(query)
     connection.commit()
 
-    # return cursor.lastrowid
-    return product_id
+    return cursor.lastrowid
+    # return product_id
 
 # edit
 def update_product(connection, product):

@@ -1,4 +1,7 @@
-from backend.sql_connection import get_sql_connection
+# For implement
+from sql_connection import get_sql_connection
+# For test
+# from backend.sql_connection import get_sql_connection
 from datetime import datetime
 
 
